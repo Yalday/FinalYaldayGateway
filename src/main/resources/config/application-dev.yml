@@ -88,7 +88,6 @@ jhipster:
         authorized-microservices-endpoints: # Access Control Policy, if left empty for a route, all endpoints will be accessible
             app1: /api,/v2/api-docs # recommended dev configuration
     cache: # Hibernate 2nd level cache, used by CacheConfiguration
-        timeToLiveSeconds: 3600
         ehcache:
             maxBytesLocalHeap: 16M
     security:
@@ -99,12 +98,9 @@ jhipster:
                 tokenValidityInSeconds: 86400
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: YaldayGateway@localhost
+        baseUrl: # keep empty to use the server's default URL
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
-        spark:
-            enabled: false
-            host: localhost
-            port: 9999
         graphite:
             enabled: false
             host: localhost

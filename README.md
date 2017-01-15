@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/Yalday/FinalYaldayGateway.svg?branch=master)](https://travis-ci.org/Yalday/FinalYaldayGateway)
-
 # YaldayGateway
 
 This application was generated using JHipster 3.9.1, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v3.9.1](https://jhipster.github.io/documentation-archive/v3.9.1).

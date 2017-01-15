@@ -1,5 +1,5 @@
 # ===================================================================
-# Spring Cloud  Config bootstrap configuration for the "prod" profile
+# Spring Cloud Config bootstrap configuration for the "prod" profile
 # ===================================================================
 
 spring:

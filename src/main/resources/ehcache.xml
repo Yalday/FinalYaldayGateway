@@ -36,6 +36,10 @@
     <cache name="com.yalday.gateway.domain.User.persistentTokens"
            timeToLiveSeconds="3600">
     </cache>
-    
+
+    <cache name="com.yalday.gateway.social.SocialUserConnection"
+           timeToLiveSeconds="3600">
+    </cache>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </ehcache>
