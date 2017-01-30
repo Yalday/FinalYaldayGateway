@@ -6,7 +6,6 @@ import java.util.Set;
 
 import com.yalday.gateway.domain.User;
 import com.yalday.gateway.service.dto.UserDTO;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
