@@ -23,7 +23,7 @@ describe('Social Tests', function() {
                     $state = $injector.get('$state');
                     $q = $injector.get('$q');
 
-                    //new shit
+                 
                     $cookies.put('social-authenticationTest','helloTest');
                     spyOn($state, 'go');
 
