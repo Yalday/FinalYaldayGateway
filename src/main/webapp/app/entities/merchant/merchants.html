@@ -1,0 +1,99 @@
+<div>
+    <h2 data-translate="yaldayGatewayApp.merchant.home.title">Merchants</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="merchant.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="yaldayGatewayApp.merchant.home.createLabel">
+                        Create new Merchant
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'yaldayGatewayApp.merchant.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span data-translate="yaldayGatewayApp.merchant.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email"><span data-translate="yaldayGatewayApp.merchant.email">Email</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span data-translate="yaldayGatewayApp.merchant.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="logo"><span data-translate="yaldayGatewayApp.merchant.logo">Logo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="firstLineOfAddress"><span data-translate="yaldayGatewayApp.merchant.firstLineOfAddress">First Line Of Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="secondLineOfAddress"><span data-translate="yaldayGatewayApp.merchant.secondLineOfAddress">Second Line Of Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="city"><span data-translate="yaldayGatewayApp.merchant.city">City</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="postcode"><span data-translate="yaldayGatewayApp.merchant.postcode">Postcode</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="facebook"><span data-translate="yaldayGatewayApp.merchant.facebook">Facebook</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="instagram"><span data-translate="yaldayGatewayApp.merchant.instagram">Instagram</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dateCreated"><span data-translate="yaldayGatewayApp.merchant.dateCreated">Date Created</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastEdited"><span data-translate="yaldayGatewayApp.merchant.lastEdited">Last Edited</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="merchant in vm.merchants track by merchant.id">
+                    <td><a ui-sref="merchant-detail({id:merchant.id})">{{merchant.id}}</a></td>
+                    <td>{{merchant.name}}</td>
+                    <td>{{merchant.email}}</td>
+                    <td>{{merchant.description}}</td>
+                    <td>{{merchant.logo}}</td>
+                    <td>{{merchant.firstLineOfAddress}}</td>
+                    <td>{{merchant.secondLineOfAddress}}</td>
+                    <td>{{merchant.city}}</td>
+                    <td>{{merchant.postcode}}</td>
+                    <td>{{merchant.facebook}}</td>
+                    <td>{{merchant.instagram}}</td>
+                    <td>{{merchant.dateCreated | date:'medium'}}</td>
+                    <td>{{merchant.lastEdited | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="merchant-detail({id:merchant.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="merchant.edit({id:merchant.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="merchant.delete({id:merchant.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>
