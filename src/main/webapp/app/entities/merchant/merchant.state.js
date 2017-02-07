@@ -195,7 +195,46 @@
                     $state.go('^');
                 });
             }]
-        });
+        })
+        .state('merchant.signup', {
+                   parent: 'home',
+                   url: '/new',
+                   data: {
+                       authorities: ['ROLE_USER']
+                   },
+                   onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
+                       $uibModal.open({
+                           templateUrl: 'app/entities/merchant/merchant-signup.html',
+                           controller: 'MerchantDialogController',
+                           controllerAs: 'vm',
+                           backdrop: 'static',
+                           size: 'md',
+                           resolve: {
+                               entity: function () {
+                                   return {
+                                       name: null,
+                                       email: null,
+                                       description: null,
+                                       logo: null,
+                                       firstLineOfAddress: null,
+                                       secondLineOfAddress: null,
+                                       city: null,
+                                       postcode: null,
+                                       facebook: null,
+                                       instagram: null,
+                                       id: null
+                                   };
+                               }
+                           }
+                       }).result.then(function() {
+                           $state.go('home', null, { reload: 'home' });
+                       }, function() {
+                           $state.go('home');
+                       });
+                   }]
+               });
+
+
     }
 
 })();

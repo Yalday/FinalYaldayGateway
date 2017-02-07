@@ -1,0 +1,182 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMerchantLabel">Merchant Information</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.merchant.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   ng-model="vm.merchant.id" readonly/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name">*Merchant Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                   ng-model="vm.merchant.name"
+                   required ng-minlength="5" ng-maxlength="50" />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.name.$error.required" >
+                    This field is required.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.name.$error.minlength" translate-value-min="5">
+                    This field is required to be at least 5 characters.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.name.$error.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_email">*Merchant's Email Address</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                   ng-model="vm.merchant.email"
+                   required ng-minlength="4" ng-maxlength="40" />
+            <div ng-show="editForm.email.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.email.$error.required" >
+                    This field is required.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.email.$error.minlength">
+                    This field is required to be at least 4 characters.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.email.$error.maxlength">
+                    This field cannot be longer than 40 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_description">*Description of Merchant's Business</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                   ng-model="vm.merchant.description"
+                   required ng-minlength="5" ng-maxlength="256" />
+            <div ng-show="editForm.description.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.description.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.description.$error.minlength" translate-value-min="5">
+                    This field is required to be at least 5 characters.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.description.$error.maxlength" translate-value-max="256">
+                    This field cannot be longer than 256 characters.
+                </p>
+            </div>
+        </div>
+        <!--div class="form-group">
+            <label class="control-label" for="field_logo">Logo</label>
+            <input type="text" class="form-control" name="logo" id="field_logo"
+                   ng-model="vm.merchant.logo"
+            />
+        </div-->
+        <div class="form-group">
+            <label class="control-label" for="field_firstLineOfAddress">Address Line One</label>
+            <input type="text" class="form-control" name="firstLineOfAddress" id="field_firstLineOfAddress"
+                   ng-model="vm.merchant.firstLineOfAddress"
+            />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_secondLineOfAddress">Address Line Two</label>
+            <input type="text" class="form-control" name="secondLineOfAddress" id="field_secondLineOfAddress"
+                   ng-model="vm.merchant.secondLineOfAddress"
+            />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                   ng-model="vm.merchant.city"
+            />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_postcode">*Postcode</label>
+            <input type="text" class="form-control" name="postcode" id="field_postcode"
+                   ng-model="vm.merchant.postcode"
+                   required ng-minlength="5" ng-maxlength="10" />
+            <div ng-show="editForm.postcode.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.postcode.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.postcode.$error.minlength" translate-value-min="5">
+                    This field is required to be at least 5 characters.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.postcode.$error.maxlength" translate-value-max="10">
+                    This field cannot be longer than 10 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_facebook">Merchant's Facebook Page</label>
+            <input type="text" class="form-control" name="facebook" id="field_facebook"
+                   ng-model="vm.merchant.facebook"
+                   ng-minlength="5" ng-maxlength="20" />
+            <div ng-show="editForm.facebook.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.facebook.$error.minlength" translate-value-min="5">
+                    This field is required to be at least 5 characters.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.facebook.$error.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_instagram">Merchant's Instagram Page</label>
+            <input type="text" class="form-control" name="instagram" id="field_instagram"
+                   ng-model="vm.merchant.instagram"
+                   ng-minlength="5" ng-maxlength="20" />
+            <div ng-show="editForm.instagram.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.instagram.$error.minlength" translate-value-min="5">
+                    This field is required to be at least 5 characters.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.instagram.$error.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <!--div class="form-group">
+            <label class="control-label" for="field_dateCreated">Date Created</label>
+            <div class="input-group">
+                <input id="field_dateCreated" type="text" class="form-control" name="dateCreated" datetime-picker="{{dateformat}}" ng-model="vm.merchant.dateCreated" is-open="vm.datePickerOpenStatus.dateCreated"
+                       />
+                <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateCreated')">{{dateCreated.now() | date:'yyyy-MM-dd HH:mm:ss'}}<i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_lastEdited">Last Edited</label>
+            <div class="input-group">
+                <input id="field_lastEdited" type="text" class="form-control" name="lastEdited" datetime-picker="{{dateformat}}" ng-model="vm.merchant.lastEdited" is-open="vm.datePickerOpenStatus.lastEdited">{{lastEdited.now() | date:'yyyy-MM-dd HH:mm:ss'}}</input>
+
+                <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastEdited')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+            </div>
+        </div-->
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
