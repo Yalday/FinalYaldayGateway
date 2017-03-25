@@ -7,13 +7,14 @@
     Merchant.$inject = ['$resource', 'DateUtils'];
 
     function Merchant ($resource, DateUtils) {
+
         var resourceUrl =  'finalyaldaymerchant/' + 'api/merchants/:id';
+
 
         return $resource(resourceUrl, {}, {
             'query': { method: 'GET', isArray: true},
             'get': {
-                method: 'GET',
-                transformResponse: function (data) {
+                method: 'GET',                transformResponse: function (data) {
                     if (data) {
                         data = angular.fromJson(data);
                         data.dateCreated = DateUtils.convertDateTimeFromServer(data.dateCreated);
@@ -22,7 +23,13 @@
                     return data;
                 }
             },
-            'update': { method:'PUT' }
+            'update': { method:'POST',
+                params: {
+                      id: '@id'
+                }
+
+            }
         });
+
     }
 })();

@@ -12,9 +12,9 @@
 
         vm.merchant = entity;
         vm.previousState = previousState.name;
-
         var unsubscribe = $rootScope.$on('yaldayGatewayApp:merchantUpdate', function(event, result) {
             vm.merchant = result;
+
         });
         $scope.$on('$destroy', unsubscribe);
     }
