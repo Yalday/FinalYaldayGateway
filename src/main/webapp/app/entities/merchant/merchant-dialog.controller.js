@@ -28,7 +28,6 @@
             vm.isSaving = true;
             if (vm.merchant.id !== null) {
                 Merchant.update(vm.merchant, onSaveSuccess, onSaveError);
-                 console.log(vm.merchant);
             } else {
                 Merchant.save(vm.merchant, onSaveSuccess, onSaveError);
 
