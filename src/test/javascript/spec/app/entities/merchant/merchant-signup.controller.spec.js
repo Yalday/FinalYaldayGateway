@@ -14,7 +14,7 @@ describe('Controller Tests', function() {
 
      beforeEach(inject(function($injector) {
 
-      //Constructor is  MerchantDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Merchant)
+
 
          $q = $injector.get('$q');
           $scope = $injector.get('$rootScope').$new();
@@ -40,7 +40,7 @@ describe('Controller Tests', function() {
           };
       }));
 
-      it('test1', function() {
+      it('save has been called', function() {
 
          createController();
          $scope.vm.merchant.id = null;
@@ -50,7 +50,7 @@ describe('Controller Tests', function() {
       });
 
 
-      it('test2', function() {
+      it('isSaving is true', function() {
 
          createController();
          $scope.vm.save();
@@ -58,7 +58,7 @@ describe('Controller Tests', function() {
 
       });
 
-     it('test3', function() {
+     it('update has been called', function() {
 
         createController();
         $scope.vm.merchant.id = 1;
@@ -67,7 +67,7 @@ describe('Controller Tests', function() {
 
      });
 
-       it('test4', function() {
+       it('clear has been called', function() {
 
         createController();
         $scope.vm.clear();
@@ -75,7 +75,7 @@ describe('Controller Tests', function() {
 
        });
 
-       it('test1', function() {
+       it('merchant entity has been saved', function() {
 
                 MockMerchant = {
                                    id : 2,
