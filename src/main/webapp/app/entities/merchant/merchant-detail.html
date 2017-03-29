@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span data-translate="yaldayGatewayApp.merchant.detail.title">Merchant</span> {{vm.merchant.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="yaldayGatewayApp.merchant.name">Name</span></dt>
+        <dd>
+            <span>{{vm.merchant.name}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.email">Email</span></dt>
+        <dd>
+            <span>{{vm.merchant.email}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.description">Description</span></dt>
+        <dd>
+            <span>{{vm.merchant.description}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.logo">Logo</span></dt>
+        <dd>
+            <span>{{vm.merchant.logo}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.firstLineOfAddress">First Line Of Address</span></dt>
+        <dd>
+            <span>{{vm.merchant.firstLineOfAddress}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.secondLineOfAddress">Second Line Of Address</span></dt>
+        <dd>
+            <span>{{vm.merchant.secondLineOfAddress}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.city">City</span></dt>
+        <dd>
+            <span>{{vm.merchant.city}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.postcode">Postcode</span></dt>
+        <dd>
+            <span>{{vm.merchant.postcode}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.facebook">Facebook</span></dt>
+        <dd>
+            <span>{{vm.merchant.facebook}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.instagram">Instagram</span></dt>
+        <dd>
+            <span>{{vm.merchant.instagram}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.dateCreated">Date Created</span></dt>
+        <dd>
+            <span>{{vm.merchant.dateCreated | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="yaldayGatewayApp.merchant.lastEdited">Last Edited</span></dt>
+        <dd>
+            <span>{{vm.merchant.lastEdited | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="merchant-detail.edit({id:vm.merchant.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

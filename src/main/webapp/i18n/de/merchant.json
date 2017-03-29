@@ -1,0 +1,33 @@
+{
+    "yaldayGatewayApp": {
+        "merchant" : {
+            "home": {
+                "title": "Merchants",
+                "createLabel": "Merchant erstellen",
+                "createOrEditLabel": "Merchant erstellen oder bearbeiten",
+                "search": "Suche nach Merchant"
+            },
+            "created": "Merchant erstellt mit ID {{ param }}",
+            "updated": "Merchant aktualisiert mit ID {{ param }}",
+            "deleted": "Merchant gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Merchant {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Merchant"
+            },
+            "name": "Name",
+            "email": "Email",
+            "description": "Description",
+            "logo": "Logo",
+            "firstLineOfAddress": "First Line Of Address",
+            "secondLineOfAddress": "Second Line Of Address",
+            "city": "City",
+            "postcode": "Postcode",
+            "facebook": "Facebook",
+            "instagram": "Instagram",
+            "dateCreated": "Date Created",
+            "lastEdited": "Last Edited"
+        }
+    }
+}
