@@ -62,10 +62,16 @@ spring:
             repositories:
                 enabled: false
     mail:
-        host: localhost
-        port: 25
-        username:
-        password:
+         host: smtp.mail.yahoo.com
+         port: 587
+         username: yaldayteam@yahoo.com
+         password: glasgow2016
+         protocol: smtp
+         tls: true
+         properties.mail.smtp:
+            auth: true
+            starttls.enable: true
+            ssl.trust: smtp.mail.yahoo.com
     messages:
         cache-seconds: 1
     thymeleaf:
@@ -97,7 +103,7 @@ jhipster:
                 # Token is valid 24 hours
                 tokenValidityInSeconds: 86400
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: YaldayGateway@localhost
+        from: yaldayteam@yahoo.com
         baseUrl: # keep empty to use the server's default URL
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
