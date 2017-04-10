@@ -17,6 +17,14 @@
         $scope.$on('authenticationSuccess', function() {
             getAccount();
         });
+        vm.myInterval = 1500;
+        vm.noWrapSlides = false;
+        vm.active = 0;
+        var currIndex = 0;
+        var slides = vm.slides = [   {image: '../content/images/anh.png', id: currIndex++},
+                                    {image: '../content/images/esb.png', id: currIndex++},
+                                    {image: '../content/images/rotj.png', id: currIndex++}
+                                 ];
 
         getAccount();
 
@@ -29,5 +37,6 @@
         function register () {
             $state.go('register');
         }
+
     }
 })();
