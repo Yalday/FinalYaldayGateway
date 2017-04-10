@@ -32,7 +32,7 @@
 
         vm.searchppl = {    
                             total : 0,
-                            text :'No people',
+                            text :'How many people?',
                             children : vm.child,
                             adults : vm.adults
                         };

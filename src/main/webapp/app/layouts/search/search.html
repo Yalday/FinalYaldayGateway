@@ -12,17 +12,18 @@
 			<input class="flext-field search-flext" id="searchtext" name="searchtext" placeholder="Search!" /> 
 			<!--label> When? </label-->
 			<input type="text"  
-				class="flext-field date-flext" 
+				class="flext-field misc-flext" 
 				id="field_bookingDate" 
 				name="bookingDate" 
 				datetime-picker="{{dateformat}}" 
 				ng-model="vm.bookingDate" 
 				is-open="vm.datePickerOpenStatus.bookingDate"
-				placeholder="{{vm.date | date:'yyyy-MM-dd'}}"
-				ng-click="vm.openCalendar('bookingDate')"
+				placeholder="What time?"
+				ng-click="vm.openCalendar('bookingDate')"	
+				datepicker-options="{showWeeks: false}"			
 				/> 
-			<input type="text"
-				class="flext-field ppl-flext" 
+			<!--input type="text"
+				class="flext-field misc-flext" 
 				name="searchppl" 
 				id="field_searchppl" 
 				ng-model="vm.searchppl.text" 
@@ -32,8 +33,9 @@
 				placeholder="{{vm.searchppl.text}}"
 				popover-is-open="vm.popIsOpen"
 				ng-click="vm.popOpen()"
-				/>
-			<button type="submit" class="btn flex-btn search-btn" ng-click="vm.goSearch()" ui-sref="search"><span class="fa fa-search"></span></button>
+				popover-trigger="outsideClick"
+				/-->
+			<button type="submit" class="btn search-btn" ng-click="vm.goSearch()" ui-sref="search"><span class="fa fa-search"></span></button>
 		</div>
 	</div>
 	<div class="col-md-3"></div>
