@@ -1,16 +1,13 @@
 <div class="row">
-	<div class="col-md-3"/>
-	<div class="col-md-6"> <h1 class="tagline"> Yalday! Where to next? </h1> </div>
-	<div class="col-md-3"/>
+	<!--div class="col-md-3"/-->
+	<div class="col-md-6 col-md-offset-3"> <h1 class="tagline"> Yalday! Where to next? </h1> </div>
+	<!--div class="col-md-3"/-->
 </div>
 
 <div class="row">
-	<div class="col-md-3"></div>
-	<div class="col-md-6">
+	<div class="col-md-6 col-md-offset-3">
 		<div class="Field Field-is-search">
-			<!--label> Where? </label-->
 			<input class="flext-field search-flext" id="searchtext" name="searchtext" placeholder="Search!" /> 
-			<!--label> When? </label-->
 			<input type="text"  
 				class="flext-field misc-flext" 
 				id="field_bookingDate" 
@@ -22,22 +19,8 @@
 				ng-click="vm.openCalendar('bookingDate')"	
 				datepicker-options="{showWeeks: false}"			
 				/> 
-			<!--input type="text"
-				class="flext-field misc-flext" 
-				name="searchppl" 
-				id="field_searchppl" 
-				ng-model="vm.searchppl.text" 
-				popover-class="increase-popover-width"
-				uib-popover-template="vm.popoverTemplate" 
-				popover-placement="bottom" 
-				placeholder="{{vm.searchppl.text}}"
-				popover-is-open="vm.popIsOpen"
-				ng-click="vm.popOpen()"
-				popover-trigger="outsideClick"
-				/-->
 			<button type="submit" class="btn search-btn" ng-click="vm.goSearch()" ui-sref="search"><span class="fa fa-search"></span></button>
 		</div>
 	</div>
-	<div class="col-md-3"></div>
 </div>
 <br>

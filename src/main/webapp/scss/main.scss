@@ -4,6 +4,7 @@ body {
 font-family: "cooper_hewittmedium";
    /* color: #333;*/
        padding-bottom:40px;   /* Height of the footer */
+
 }
 
 .right{
@@ -406,9 +407,7 @@ Social button
 
 
 
-/* Added by Asif for design */
-
-
+/* Added May 2017*/
 
 
 .tagline {
@@ -424,78 +423,20 @@ Social button
     box-shadow: none;
 }
 
-.peopleText {
-    height: 100px;
-    border: 0px none;
-    box-shadow: none;
- /*   box-sizing:border-box;
-    display: inline-block; */
-}
-
-.dateText {
-    height: 100px;
-    border: 0px none;
-    box-shadow: none;
- /*   box-sizing:border-box;
-    display: inline-block; */
-}
-
-.btnSearch {
-    width: 80px;
-    height: 100px;
-    border: 0px none;
-    box-shadow: none;
-    background: #fff;
-    outline: none;
-}
-
-.btnCal {
-    width: 40px;
-    height: 100px;
-    box-shadow: none;
-    background: #fff;
-    outline: none;
-}
-
-.btn.buttonCounter {
-    width: 40px;
-    height: 50px;
-    box-shadow: none;
-    background: #fff;
-    outline: none;
-    padding: 0px;
-}
-
-.btn-group-vertical {
-    padding: 0px;
-    margin-top: 0px;
-    border: 0px;
-}
-
-.btn.buttonTest {
-    width: 40px;
-    height: 100px;
-    box-shadow: none;
-    background: #fff;
-    outline: none;
-    padding: 0px;
-}
-
-.removeRounding {
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    border: 0px none;
-}
-
 .form-control:focus {
-  border-color: inherit;
+  border-color: #d3d1d1;
   -webkit-box-shadow: none;
   box-shadow: none;
+
 }
 
 .navbar {    
   background: #fff;;
+    border-bottom: 1px solid #d3d1d1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
 }
 
 .nav {
@@ -503,13 +444,10 @@ Social button
   color: #ffffff;
 }
 
-.newSearch {
-    width: 100%;
-}
-
 .footer {
   font: "cooper_hewittsemibold";
     background: #ffffff;
+
     color:    #000000; 
 
 }
@@ -582,10 +520,6 @@ Social button
     border-left: none;
 }
 
-.cntBtn {
-    background: #fff;
-}
-
 .search-btn {
     height: 60px;
     background: #fff; 
@@ -615,10 +549,6 @@ Social button
 
 .fa-search {
   color: #d3d1d1;
-}
-
-.counter-btn {
-    height: 30px;
 }
 
 .Field-is-search:before {
@@ -684,20 +614,9 @@ Social button
     width:25rem;
 }
 
-.popover-field {
-    max-width: 30px;
-}
-
-.increase-popover-width {
-   max-width: 400px;
-}
 
 .text-left {
     text-align: left;
-}
-
-.popover-font {
-    font-family: "cooper_hewittmedium";
 }
 
 .slide-image {
@@ -720,3 +639,4 @@ a:link {color:#000000;}
 .results {
     display: inline;
 }
+

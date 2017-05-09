@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     ngConstant = require('gulp-ng-constant'),
     rename = require('gulp-rename'),
+    uglify = require('gulp-uglify'),
     eslint = require('gulp-eslint'),
     argv = require('yargs').argv,
     gutil = require('gulp-util'),
@@ -32,6 +33,12 @@ var handleErrors = require('./gulp/handle-errors'),
     build = require('./gulp/build');
 
 var config = require('./gulp/config');
+
+gulp.task('minify', function() {  
+    return gulp.src(config.app + 'app/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest(config.miniDir));
+});
 
 gulp.task('clean', function () {
     return del([config.dist], { dot: true });
