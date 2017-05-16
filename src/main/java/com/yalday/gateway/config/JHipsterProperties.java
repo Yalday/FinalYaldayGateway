@@ -33,7 +33,7 @@ public class JHipsterProperties {
 
     private final CorsConfiguration cors = new CorsConfiguration();
 
-    private final Social social = new Social();
+    /*private final Social social = new Social(); */
 
     private final Gateway gateway = new Gateway();
 
@@ -69,10 +69,6 @@ public class JHipsterProperties {
 
     public CorsConfiguration getCors() {
         return cors;
-    }
-
-    public Social getSocial() {
-        return social;
     }
 
     public Gateway getGateway() {
@@ -473,19 +469,6 @@ public class JHipsterProperties {
             public boolean isEnabled() { return enabled; }
 
             public void setEnabled(boolean enabled) { this.enabled = enabled; }
-        }
-    }
-
-    public static class Social {
-
-        private String redirectAfterSignIn = "/#/home";
-
-        public String getRedirectAfterSignIn() {
-            return redirectAfterSignIn;
-        }
-
-        public void setRedirectAfterSignIn(String redirectAfterSignIn) {
-            this.redirectAfterSignIn = redirectAfterSignIn;
         }
     }
 

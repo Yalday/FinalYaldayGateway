@@ -1,3 +1,4 @@
+/*
 package com.yalday.gateway.web.rest;
 
 import com.yalday.gateway.security.jwt.JWTConfigurer;
@@ -49,3 +50,5 @@ public class UserJWTController {
         }
     }
 }
+
+*/

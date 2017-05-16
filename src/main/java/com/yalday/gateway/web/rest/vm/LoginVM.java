@@ -1,3 +1,7 @@
+/**
+ * View Model object for storing a user's credentials.
+ */
+/*
 package com.yalday.gateway.web.rest.vm;
 
 import com.yalday.gateway.config.Constants;
@@ -5,9 +9,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-/**
- * View Model object for storing a user's credentials.
- */
+
 public class LoginVM {
 
     @Pattern(regexp = Constants.LOGIN_REGEX)
@@ -54,3 +56,4 @@ public class LoginVM {
             '}';
     }
 }
+*/

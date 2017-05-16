@@ -1,3 +1,8 @@
+/**
+ * View Model extending the UserDTO, which is meant to be used in the user management UI.
+ */
+
+/*
 package com.yalday.gateway.web.rest.vm;
 
 import java.time.ZonedDateTime;
@@ -8,9 +13,7 @@ import com.yalday.gateway.domain.User;
 import com.yalday.gateway.service.dto.UserDTO;
 import javax.validation.constraints.Size;
 
-/**
- * View Model extending the UserDTO, which is meant to be used in the user management UI.
- */
+
 public class ManagedUserVM extends UserDTO {
 
     public static final int PASSWORD_MIN_LENGTH = 4;
@@ -110,3 +113,4 @@ public class ManagedUserVM extends UserDTO {
             "} " + super.toString();
     }
 }
+*/
