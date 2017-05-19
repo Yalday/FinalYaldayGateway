@@ -9,22 +9,18 @@
 
     function stateConfig($stateProvider) {
         $stateProvider
-        .state('app', {
-            abstract: true,
+        .state('search', {
+            parent: 'app',
+            url: '/search',
+            data: {
+                authorities: []
+            },
             views: {
-                'navbar@': {
-                    templateUrl: 'app/layouts/navbar/navbar.html',
-                    controller: 'NavbarController',
+                'content@': {
+                    templateUrl: 'app/layouts/search/results.html',
+                    controller: 'ResultsController',
                     controllerAs: 'vm'
                 },
-                'footer@': {
-                    templateUrl: 'app/layouts/footer/footer.html'
-                },
-                'search@': {
-                    templateUrl: 'app/layouts/search/search.html',
-                    controller: 'SearchController',
-                    controllerAs: 'vm'
-                }
             },
             resolve: {
                 authorize: ['Auth',

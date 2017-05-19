@@ -16,7 +16,8 @@
     <!-- endbuild -->
     <!-- build:css content/css/main.css -->
     <link rel="stylesheet" href="content/css/main.css">
-
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/958b12b81f.js"></script>
 
     <!-- build:css content/css/main.css -->
 
@@ -27,16 +28,17 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div ui-view="navbar" ng-cloak></div>
-<div class="container">
-    <div class="well" ui-view="content">
-        <!-- Angular views -->
+    <div ui-view="navbar" ng-cloak></div>
+
+    <div class="container-fluid" ng-cloak>
+        <div ui-view="search"></div>
     </div>
 
-    <div class="footer" ng-cloak>
-        <p data-translate="footer">This is your footer</p>
+    <div class="container-fluid" ng-cloak>
+        <div class="" ui-view="content"></div>
     </div>
-</div>
+
+    <div class="footer" ui-view="footer" ng-cloak></div>
 
 <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
 <script>
@@ -91,6 +93,9 @@
 <script src="app/services/auth/auth.jwt.service.js"></script>
 <script src="app/services/auth/activate.service.js"></script>
 <script src="app/services/auth/account.service.js"></script>
+<script src="app/layouts/search/search.state.js"></script>
+<script src="app/layouts/search/search.controller.js"></script>
+<script src="app/layouts/search/results.controller.js"></script>
 <script src="app/layouts/navbar/navbar.controller.js"></script>
 <script src="app/layouts/navbar/active-menu.directive.js"></script>
 <script src="app/layouts/navbar/active-link.directive.js"></script>
