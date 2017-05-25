@@ -29,7 +29,8 @@
                 password: credentials.password,
                 rememberMe: credentials.rememberMe
             };
-            return $http.post('api/authenticate', data).success(authenticateSuccess);
+           
+            return $http.post('finalyaldaymerchant/api/authenticate', data).success(authenticateSuccess);
 
             function authenticateSuccess (data, status, headers) {
                 var bearerToken = headers('Authorization');
