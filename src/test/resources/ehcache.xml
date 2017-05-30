@@ -12,23 +12,7 @@
             overflowToDisk="false"
             />
 
-    <cache name="com.yalday.gateway.domain.User"
-           timeToLiveSeconds="3600">
-    </cache>
-
-    <cache name="com.yalday.gateway.domain.Authority"
-           timeToLiveSeconds="3600">
-    </cache>
-
-    <cache name="com.yalday.gateway.domain.User.authorities"
-           timeToLiveSeconds="3600">
-    </cache>
-
     <cache name="com.yalday.gateway.domain.PersistentToken"
-           timeToLiveSeconds="3600">
-    </cache>
-
-    <cache name="com.yalday.gateway.domain.User.persistentTokens"
            timeToLiveSeconds="3600">
     </cache>
 
